@@ -1,0 +1,92 @@
+html{
+    font-size: 62.5%;
+
+    @include media(tablet-b){
+        font-size: 55.5%;
+    }
+
+    @include media(tablet-s){
+        font-size: 45.5%;
+    }
+
+    @include media(phone){
+        font-size: 40%;
+    }
+
+    @include media(desktop-b){
+        font-size: 65.5%;
+    }
+}
+
+.title{
+    margin-left: 3rem;
+    margin-top: 30rem;
+    animation-name: moveUp;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+
+    &__main{
+        text-transform: uppercase;
+        font-size: 12rem;
+        line-height: 13rem;
+        color: $color-orange;
+        font-weight: 400;
+        font-family: 'Playfair Display', serif;
+
+        @include media(tablet-s){
+            text-shadow: .1rem .4rem 0rem black;
+        }
+    }
+
+    &__secondary{
+        margin-top: 7rem;
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: 300;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+    }
+}
+
+.help{
+    position: absolute;
+    bottom: 8rem;
+    left: 3rem;
+    animation: moveUp 1s ease-in-out 2s;
+    animation-fill-mode: backwards;
+    
+    &__text{
+        font-size: 4rem;
+        line-height: 4rem;
+        font-weight: 300;
+    }
+
+    span{
+        color: $color-orange;
+        transition: all .2s ease-in;
+    }
+    span:hover{
+        color: $color-white;
+    }
+}
+
+.h2__title{
+    font-size: 8rem;
+    line-height: 9rem;
+    padding-top: 10rem;
+    width: 100%;
+    padding-bottom: 5rem;
+    margin-right: 30rem;
+    padding-left: 5rem;
+    border-bottom: 2px solid $color-black;
+    white-space: wrap;
+    font-weight: 400;
+    color: $color-orange;
+    font-family: 'Playfair Display', serif;
+}
+
+.orangebottom{
+    border-bottom: 2px solid $color-orange !important;
+}

@@ -1,0 +1,62 @@
+.decor {
+    position: relative;
+
+    &__icon {
+        color: $color-orange;
+        position: absolute;
+        font-size: 15rem;
+        background-color: $color-gray;
+        top: 0;
+        left: 15rem;
+        z-index: 5;
+        transition: all .6s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1) rotate(-3deg);
+        }
+    }
+
+    &__1 {
+        height: .5rem;
+        width: .5rem;
+        border-radius: 50%;
+        background-color: $color-orange;
+        position: absolute;
+        top: 23rem;
+        left: 22rem;
+        @include decorMove;
+    }
+
+    // &__2 {
+    //     height: 1.5rem;
+    //     width: 1.5rem;
+    //     background-color: $color-orange;
+    //     position: absolute;
+    //     top: 25rem;
+    //     left: 22rem;
+    //     animation: decorMove 20s ease-in-out;
+    //     animation-iteration-count: infinite;
+    //     animation-direction: alternate;
+    //     animation-fill-mode: backwards;
+    // }
+
+    &__3 {
+        height: 2.5rem;
+        width: .5rem;
+        background-color: $color-orange;
+        position: absolute;
+        top: 28rem;
+        left: 22rem;
+        @include decorMove;
+    }
+
+    &__4 {
+        height: 5.5rem;
+        width: .5rem;
+        background-color: $color-orange;
+        position: absolute;
+        top: 15rem;
+        left: 22rem;
+        @include decorMove;
+    }
+}

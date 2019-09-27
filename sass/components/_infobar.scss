@@ -1,0 +1,110 @@
+.infobar {
+    height: 3rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.233);
+    // animation: moveDown 1s ease 3s;
+    animation-fill-mode: backwards;
+
+    @include media(phone){
+        display: none;
+    }
+    @include media(tablet-s){
+        
+    }
+    @include media(tablet-b){
+        height: 6rem;
+    }
+
+    a{
+        color: $color-white;
+        text-decoration: none;
+        transition: all .4s ease;
+    }
+
+    a:hover{
+        color:$color-orange;
+    }
+
+    .infobar__icon {
+        fill: $color-white;
+        text-align: center;
+        margin-right: .5rem;
+        transition: all .4s ease;
+
+        i:hover{
+            color: black;
+        }
+    }
+
+    &--top {
+        background-color: $color-black;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        top: 0;
+        left: 0;
+        height: 3rem;
+        z-index: 3;
+        width: 60%;
+        transform: translateX(-1rem) skewX(-20deg);
+
+        @include media(tablet-b){
+            width: 100%;
+        }
+        
+    }
+
+    &--middle {
+        background-color: $color-gray;
+        position: absolute;
+        display: flex;
+        top: 0;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 2rem;
+        right: 20%;
+        height: 3rem;
+        z-index: 2;
+        width: 30%;
+        transform: skewX(-20deg);
+        
+        a{
+            color:black;
+        }
+
+        @include media(tablet-b){
+            top: 3rem;
+            left: -1rem;
+            width: 50%;
+            z-index: 5000;
+        }
+    }
+
+    &--bottom {
+        width: 20%;
+        background-color: $color-orange;
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-right: 3rem;
+        top: 0;
+        right: 0;
+        height: 3rem;
+        z-index: 1;
+        transform: translateX(1rem) skewX(-20deg);
+
+        @include media(tablet-b){
+            width: 50%;
+            top: 3rem;
+        }
+    }
+
+    span {
+        transform: skewX(20deg);
+    }
+
+}

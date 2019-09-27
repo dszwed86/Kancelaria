@@ -1,0 +1,122 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__top{
+        width: 100%;
+    }
+
+    &__left{
+        width:25%;
+        height: 65rem;
+        padding: 8rem 0;
+        overflow: hidden;
+
+        @include media(tablet-s){
+            width: 0;
+        }
+    }
+
+    &__right{
+        flex: 1;
+        padding: 8rem 0;
+        margin-right: 20rem;
+        margin-left: 10rem;
+        font-size: 2.5rem;
+        
+        @include media(phone){
+            margin-right: 3rem;
+            margin-left: 3rem;
+        }
+
+        @include media(tablet-s){
+            margin-right: 5rem;
+            margin-left: 5rem;
+        }
+
+        &__box{
+            background-color: $color-white;
+            border-radius: 3px;
+            padding: 3rem 4rem;
+            min-height: 45rem;
+            box-shadow: 0rem 2rem 3rem rgba(0, 0, 0, 0.11);    
+            position: relative;
+
+            &--text{
+                color: $color-black;
+                text-indent: 3rem;
+                hyphens: auto;
+                text-align: center;
+                line-height: 3rem;
+                transition: all .4s ease-in;
+                padding-bottom: 12rem;
+            }
+            &__person{
+                position: absolute;
+                bottom: 7.5rem;
+                display: block;
+                left: 50%;
+                text-align: center;
+                transform: translate(-50%, 0%);
+
+                &--who{
+                    text-transform: uppercase;
+                    color: $color-orange;
+                    font-size: 2rem;
+                    margin-bottom: .8rem;
+                }
+                &--what{
+                    color: $color-black;
+                    font-size: 1.6rem;
+                    display: block;
+                }
+            }
+
+            &__nav{
+                color: $color-orange;
+                display: flex;
+                font-size: 4rem;
+                position: absolute;
+                bottom: 4rem;
+                left: 50%;
+                transform: translate(-50%, 0%);
+
+                &--left{
+                    margin-right: 2rem;
+                    transition: all .2s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+                }
+
+                &--right{
+                    margin-left: 2rem;
+                    transition: all .2s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+
+                }
+            }
+            
+        }
+        
+        &--text{
+            color: $color-black;
+            text-indent: 3rem;
+            hyphens: auto;
+            line-height: 3rem;
+        }
+    }
+}
+
+.commentOff{
+    opacity: 0;
+    // visibility: hidden;
+    // height: 0;
+    transform: translateX(-3rem)
+}

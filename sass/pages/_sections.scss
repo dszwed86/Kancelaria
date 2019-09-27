@@ -1,0 +1,155 @@
+.section1{
+    position: relative;
+    background-image: url(/img/strona-1v-min.jpg);
+    height: 90rem;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+
+    @media(min-resolution: 192dpi) and (min-width: 60rem), (min-width: 2000px){
+        background-image: url(/img/strona-1v.jpg);
+    }
+
+    &__photo{ 
+        width: 100%;
+    }
+
+    .help a{
+        text-decoration: none;
+        color: $color-white;
+    }
+
+    @include media(tablet-b){
+        background-position: right top;
+    }
+}
+
+.section2{
+    background-color: $color-gray;
+}
+
+.section3{
+    background-image: url(/img/strona-3-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media(min-resolution: 192dpi) and (min-width: 60rem), (min-width: 2000px){
+        background-image: url(/img/strona-3.jpg);
+    }
+}
+
+.section4{
+    background-color: $color-gray;
+}
+
+.section5{
+    background-image: url(/img/strona-5-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    @media(min-resolution: 192dpi) and (min-width: 60rem), (min-width: 2000px){
+        background-image: url(/img/strona-5.jpg);
+    }
+}
+
+.section6{
+    background-color: $color-gray;
+}
+
+.section7{
+    background-image: url(/img/strona-7-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+
+    @media(min-resolution: 192dpi) and (min-width: 60rem), (min-width: 2000px){
+        background-image: url(/img/strona-7.jpg);
+    }
+
+    .contactText{
+        margin-left: 5rem;
+        padding: 3rem 0;
+        position: relative;
+
+        &__title{
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 300;
+            line-height: 5.8rem;
+        }
+
+        &__p{
+            margin: 3rem 0;
+            font-weight: 300;
+            font-size: 2.5rem;
+            line-height: 3.8rem;
+            
+            &:last-child{
+                margin-bottom: 24rem;
+            }
+        }
+
+        @include media(phone){
+            margin-left: 2rem;
+        }
+    }
+    .google__map{
+        position: absolute;
+        bottom: 5rem;
+        left: 60rem;
+        height: 30rem;
+        width: 40rem;
+
+        &--map{
+            box-shadow: 0rem 2rem 3rem rgba(0, 0, 0, 0.178);
+            border-radius: 13px;
+            
+            @include media(tablet-b){
+                position: relative;
+                left:3rem;
+                width: 40rem;
+                bottom: 55%;
+            }
+        }
+
+        @include media(phone){
+            position: relative;
+            left:3rem;
+            bottom: 10;
+        }
+
+
+        &:hover::before{
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+section > *{
+    opacity: 0;
+    transform: translateX(20rem);
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+
+    @include media(tablet-s){
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+.visible{
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.content{
+    z-index: 5;
+}

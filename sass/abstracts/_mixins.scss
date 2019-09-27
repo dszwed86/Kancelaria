@@ -1,0 +1,34 @@
+// Media query
+/*
+
+0-600px:    telefon
+600 - 900px:    tablet
+900 - 1200px: tablet
+[1200 - 1800]: style docelowe
+1800px+: duze monitory
+
+*/
+
+//Media manager
+
+@mixin media($breakpoint){
+    @if($breakpoint == phone){
+     @media (max-width: 37.5em) { @content };
+    }
+    @if($breakpoint == tablet-s){
+     @media (max-width: 56.25em) { @content };   
+    }
+    @if($breakpoint == tablet-b){
+     @media (max-width: 75em) { @content };   
+    }
+    @if($breakpoint == desktop-b){
+     @media (min-width: 112.5em) { @content };   
+    }
+}
+
+@mixin decorMove{
+    animation: decorMove 10s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-direction: alternate;
+}
