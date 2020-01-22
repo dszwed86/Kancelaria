@@ -1,3 +1,5 @@
+import '../sass/main.scss'
+
 // *****************
 // Comments navbar  //
 // *****************
@@ -143,6 +145,13 @@ sectionsArr.forEach(el => {
     observer.observe(el);
 })
 
+let navItems = [...document.querySelectorAll('.navbar__compact__item')]
+
+navItems.forEach(el=>{
+    el.addEventListener('click', function(){
+        uncheck()
+    })
+});
 
 function uncheck() {
     document.querySelector('.nav__toggle--toggler').checked = false;
